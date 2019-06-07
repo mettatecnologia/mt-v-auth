@@ -1,0 +1,26 @@
+{
+  "name": "jb-v-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbmchd/jb-v-auth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbmchd/jb-v-auth/issues"
+  },
+  "homepage": "https://github.com/jbmchd/jb-v-auth#readme",
+  "dependencies": {
+    "axios": "^0.18",
+    "jb-v-loading": "^1.0.1",
+    "jb-v-iconevoltar": "^1.0.0",
+    "jb-v-form": "^1.0.3"
+  }
+}

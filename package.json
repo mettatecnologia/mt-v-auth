@@ -1,6 +1,6 @@
 {
   "name": "@metta/mt-v-auth",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "dependencies": {
     "axios": "^0.18",
     "@metta/mt-v-loading": "^1.0.1",
-    "@metta/mt-v-icon": "^1.0.1",
+    "@metta/mt-v-icon": "^1.0.2",
     "@metta/mt-v-form": "^1.0.3"
   }
 }

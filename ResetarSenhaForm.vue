@@ -2,13 +2,12 @@
 <div>
     <jb-loading v-model="loading.mostrar"></jb-loading>
 
-    <v-toolbar dark color="primary" class="pt-3" style="height:100px" >
-        <v-layout align-start justify-space-between column fill-height>
-            <jb-iconevoltar></jb-iconevoltar>
-
-            <v-toolbar-title class="white--text pa-0 ma-0"><h4>Alterar Senha</h4></v-toolbar-title>
-        </v-layout>
-    </v-toolbar>
+    <v-row align="center" justify="start" class="primary ma-0" >
+        <v-col>
+            <jb-iconevoltar href="/login"></jb-iconevoltar>
+            <div class="white--text pa-0 ma-0 ml-1 mt-8"><h4>Alterar Senha</h4></div>
+        </v-col>
+    </v-row>
 
     <v-card>
         <v-card-text class="pt-4">
@@ -71,7 +70,7 @@ export default {
         }
     },
     methods: {
-        resetarSenha(e){
+        resetarSenha(){
             this.loading.mostrar = true
 
             let item = {

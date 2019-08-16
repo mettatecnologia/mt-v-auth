@@ -1,6 +1,6 @@
 {
   "name": "@metta/mt-v-auth",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,8 +19,9 @@
   "homepage": "https://github.com/mettatecnologia/mt-v-auth#readme",
   "dependencies": {
     "axios": "^0.18",
-    "@metta/mt-v-loading": "^1.0.1",
-    "@metta/mt-v-icon": "^1.0.2",
-    "@metta/mt-v-form": "^1.0.3"
+    "vuetify-dialog": "1.0.0-alpha.1",
+    "@metta/mt-v-loading": "^2.0.0",
+    "@metta/mt-v-icon": "^2.0.0",
+    "@metta/mt-v-form": "^2.0.0"
   }
 }

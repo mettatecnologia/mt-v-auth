@@ -1,48 +1,48 @@
 <template>
-<div>
+<v-container>
     <jb-loading v-model="loading.mostrar"></jb-loading>
 
-    <v-toolbar dark color="primary" class="pt-3" style="height:100px" >
-        <v-layout align-start justify-space-between column fill-height>
-            <jb-iconevoltar></jb-iconevoltar>
-            <v-toolbar-title class="white--text pa-0 ma-0"><h4>Entrar</h4></v-toolbar-title>
-        </v-layout>
-    </v-toolbar>
+    <v-row align="center" justify="start" class="primary ma-0" >
+        <v-col>
+            <jb-iconevoltar href="/login"></jb-iconevoltar>
+            <div class="white--text pa-0 ma-0 ml-1 mt-8"><h4>Entrar</h4></div>
+        </v-col>
+    </v-row>
 
-    <v-card>
-        <v-card-text class="pt-4">
+    <v-row align="center" justify="start" class=" ma-0" >
+        <v-col class="pa-0">
+            <v-card>
+                <v-card-text class="pt-4">
 
-            <jb-form v-model="form.valid" ref="form" validar :mensagens="form.mensagens.mensagens" :mensagens-tipo="form.mensagens.tipo" :mensagens-detalhes="form.mensagens.detalhes" @submit="login">
+                    <jb-form v-model="form.valid" ref="form" validar :mensagens="form.mensagens.mensagens" :mensagens-tipo="form.mensagens.tipo" :mensagens-detalhes="form.mensagens.detalhes" @submit="login">
 
-                <jb-text
-                    v-model="form.email"
-                    name="email"
-                    regras="required|email"
-                    label="Email"
-                ></jb-text>
+                        <jb-text
+                            v-model="form.email"
+                            name="email"
+                            regras="required|email"
+                            label="Email"
+                        ></jb-text>
 
-                <jb-text-password
-                    v-model="form.senha"
-                    name="password"
-                    :regras="'required|min:'+senhaTamMin+'|max:'+senhaTamMax"
-                    label="Senha"
-                ></jb-text-password>
+                        <jb-text-password
+                            v-model="form.senha"
+                            name="password"
+                            :regras="'required|min:'+senhaTamMin+'|max:'+senhaTamMax"
+                            label="Senha"
+                        ></jb-text-password>
 
-                <div slot="botoes">
-                    <v-layout align-center justify-space-around>
+                        <div slot="botoes">
+                            <v-row align="center" justify="space-around">
+                                <v-btn type="submit" color="primary" :disabled="!form.valid" >Entrar</v-btn>
+                                <a :href="esqueciSenhaHref">Esqueci a senha</a>
+                            </v-row>
+                        </div>
 
-                        <v-btn type="submit" color="primary" :disabled="!form.valid" >Entrar</v-btn>
-
-                        <v-layout align-end justify-space-around column fill-height >
-                            <a :href="esqueciSenhaHref">Esqueci a senha</a>
-                        </v-layout>
-                    </v-layout>
-                </div>
-
-            </jb-form>
-        </v-card-text>
-    </v-card>
-</div>
+                    </jb-form>
+                </v-card-text>
+            </v-card>
+        </v-col>
+    </v-row>
+</v-container>
 </template>
 
 <script>
@@ -74,7 +74,7 @@ export default {
         }
     },
     methods: {
-        login(e){
+        login(){
             this.loading.mostrar = true
 
             let item = {

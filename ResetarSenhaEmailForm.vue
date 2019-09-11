@@ -14,12 +14,12 @@
             <div>
                 <jb-form v-model="form.valid" ref="form" validar :mensagens="form.mensagens.mensagens" :mensagens-tipo="form.mensagens.tipo" :mensagens-detalhes="form.mensagens.detalhes" @submit="enviarEmailResetarSenha">
 
-                    <jb-text
+                    <jb-text-email
                         v-model="form.email"
-                        regras="required|email"
-                        label="E-mail"
                         name="email"
-                    ></jb-text>
+                        regras="required"
+                        label="Email"
+                    ></jb-text-email>
 
                 </jb-form>
             </div>

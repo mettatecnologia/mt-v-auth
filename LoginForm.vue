@@ -16,17 +16,17 @@
 
                     <jb-form v-model="form.valid" ref="form" validar :mensagens="form.mensagens.mensagens" :mensagens-tipo="form.mensagens.tipo" :mensagens-detalhes="form.mensagens.detalhes" @submit="login">
 
-                        <jb-text
+                        <jb-text-email
                             v-model="form.email"
                             name="email"
-                            regras="required|email"
+                            regras="required"
                             label="Email"
-                        ></jb-text>
+                        ></jb-text-email>
 
                         <jb-text-password
                             v-model="form.senha"
                             name="password"
-                            :regras="'required|min:'+senhaTamMin+'|max:'+senhaTamMax"
+                            :regras="['required',{min:senhaTamMin},{max:senhaTamMax}]"
                             label="Senha"
                         ></jb-text-password>
 

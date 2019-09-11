@@ -15,24 +15,24 @@
 
                     <input type="hidden" name="token" :value="token">
 
-                    <jb-text
+                    <jb-text-email
                         v-model="form.email"
                         name="email"
-                        regras="required|email"
+                        regras="required"
                         label="Email"
-                    ></jb-text>
+                    ></jb-text-email>
 
                     <jb-text-password
                         v-model="form.senha"
                         name="senha"
-                        :regras="'required|min:'+senhaTamMin+'|max:'+senhaTamMax"
+                        :regras="['required',{match:'senha_confirmacao'},{min:senhaTamMin},{max:senhaTamMax}]"
                         label="Senha"
                     ></jb-text-password>
 
                     <jb-text-password
                         v-model="form.senha_confirmacao"
                         name="senha_confirmacao"
-                        regras="required"
+                        :regras="['required',{match:'senha'}]"
                         label="Confimar Senha"
                     ></jb-text-password>
 
